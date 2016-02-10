@@ -78,6 +78,7 @@ class ViewController: UIViewController, AcceptDataFromShapeVC, AcceptDataFromDou
 
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        segue.description
         if (self.act == 1)
         {
             let shapeVC = segue.destinationViewController as! ViewShapeController
