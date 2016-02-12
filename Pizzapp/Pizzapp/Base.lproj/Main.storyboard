@@ -5,6 +5,36 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
     </dependencies>
     <scenes>
+        <!--View Controller-->
+        <scene sceneID="SRQ-FU-bqy">
+            <objects>
+                <viewController id="ecp-kh-kWv" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="R9x-ui-bvw"/>
+                        <viewControllerLayoutGuide type="bottom" id="ypn-tq-E9u"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="phy-VK-6o3">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="su pizza esta Preparandose" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cVx-4P-0eZ">
+                                <rect key="frame" x="195" y="195" width="211" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="cVx-4P-0eZ" firstAttribute="centerY" secondItem="phy-VK-6o3" secondAttribute="centerY" constant="-94.5" id="YBM-eS-1rm"/>
+                            <constraint firstItem="cVx-4P-0eZ" firstAttribute="centerX" secondItem="phy-VK-6o3" secondAttribute="centerX" id="qbh-r6-7Nq"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="VpG-Sr-A6d" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="468" y="-514"/>
+        </scene>
         <!--View Select Controller-->
         <scene sceneID="3qI-5z-2U8">
             <objects>
@@ -34,11 +64,21 @@
                                     </label>
                                 </subviews>
                             </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="R1d-Df-Jbd">
+                                <rect key="frame" x="267" y="361" width="66" height="30"/>
+                                <state key="normal" title="confirmar"/>
+                                <connections>
+                                    <segue destination="ecp-kh-kWv" kind="show" id="Gii-ZW-9Qd"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="56K-wa-9A6" firstAttribute="top" secondItem="VzB-yD-4DT" secondAttribute="bottom" constant="42" id="35n-W4-Vtb"/>
+                            <constraint firstItem="56K-wa-9A6" firstAttribute="centerX" secondItem="hCY-ly-aWb" secondAttribute="centerX" id="GMj-xA-f42"/>
                             <constraint firstItem="56K-wa-9A6" firstAttribute="centerX" secondItem="hCY-ly-aWb" secondAttribute="centerX" id="cvx-Tc-kfs"/>
+                            <constraint firstItem="R1d-Df-Jbd" firstAttribute="centerX" secondItem="hCY-ly-aWb" secondAttribute="centerX" id="mzv-Km-eiq"/>
+                            <constraint firstItem="R1d-Df-Jbd" firstAttribute="top" secondItem="VzB-yD-4DT" secondAttribute="bottom" constant="297" id="qht-Vr-3pn"/>
                         </constraints>
                     </view>
                     <connections>
