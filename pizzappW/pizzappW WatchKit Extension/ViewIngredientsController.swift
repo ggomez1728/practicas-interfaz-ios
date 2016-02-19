@@ -118,7 +118,13 @@ class ViewIngredientsController: WKInterfaceController {
                 ingredients_pizza.removeAtIndex(indexOfElement!)
                 select_des_btn(btn)
             }
+            else{
+                let h0 = { print("ok")}
+                let action1 = WKAlertAction(title: "Aceptar", style: .Default, handler:h0)
+                presentAlertControllerWithTitle("No puede seleccionar mas de 5 ingredietnes", message: "", preferredStyle: .ActionSheet, actions: [action1])
+            }
         }
+        
     }
     
     func select_en_btn(btn: WKInterfaceButton ){
@@ -132,6 +138,11 @@ class ViewIngredientsController: WKInterfaceController {
         if ingredients_pizza.count > 0 {
             prepare_pizza?.ingredients = ingredients_pizza
             pushControllerWithName("id_order", context: prepare_pizza)
+        }
+        else{
+            let h0 = { print("ok")}
+            let action1 = WKAlertAction(title: "Aceptar", style: .Default, handler:h0)
+            presentAlertControllerWithTitle("Seleccione entre 1 y 5 ingredietnes", message: "", preferredStyle: .ActionSheet, actions: [action1])
         }
     }
 }
